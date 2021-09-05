@@ -7,7 +7,7 @@ int main() {
 
   int variable = 128;
   char array[128];
- auto result = gethostname(array, variable);
+  auto result = gethostname(array, variable);
   cout << string(array);
   return 0;
 }
