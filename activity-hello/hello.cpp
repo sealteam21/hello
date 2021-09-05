@@ -1,16 +1,22 @@
 #include <unistd.h>
+#include <stdlib.h>
 #include <iostream>
 
 using namespace std;
 
-int main() {
+int main (void) {
 
-  int variable = 128;
-  char array[128];
-  auto result = gethostname(array, variable);
-  cout << string(array);
+  char name[128];
+  const int nameLength = 128;
+  int returnName;
+  
+  returnName = gethostname(name, nameLength);
+  
+  cout << "The name of the current machine is " << name << "\n";
+   
   return 0;
-}
+  
 
+}
 
 
